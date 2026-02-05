@@ -1,2 +1,5 @@
-# shrikunjshiyani.github.io
-Personal portfolio website showcasing my PHP Laravel projects, skills, and professional experience.
+## 🌐 Live Portfolio
+👉 https://shrikunjshiyani.github.io
+
+## 👨‍💻 About
+PHP Laravel developer specializing in backend systems, dashboards, and data-driven applications.
