@@ -1,55 +1,278 @@
-<!-- GitHub Pages deploy trigger -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shrikunj Shiyani | PHP Laravel Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#0f172a; color:#e5e7eb; }
-    header { padding: 40px; text-align: center; background:#020617; }
-    section { padding: 40px; max-width: 900px; margin:auto; }
-    h1,h2 { color:#38bdf8; }
-    .project { background:#020617; padding:20px; margin-bottom:20px; border-radius:8px; }
-    a { color:#38bdf8; text-decoration:none; }
-  </style>
+<meta charset="UTF-8">
+<title>Shrikunj Shiyani | PHP Laravel Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+/* LEFT PANEL */
+.sidebar {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 30px;
+}
+
+.sidebar h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  color: #38bdf8;
+}
+
+.sidebar h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.sidebar p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.section-title {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #38bdf8;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 5px;
+}
+
+.sidebar ul {
+  padding-left: 18px;
+}
+
+.sidebar li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* MAIN CONTENT */
+.content {
+  padding: 40px;
+}
+
+.content h2 {
+  font-size: 22px;
+  color: #0f172a;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.company {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.content ul {
+  padding-left: 18px;
+}
+
+.content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.project {
+  margin-bottom: 15px;
+}
+
+.project a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Shrikunj Shiyani</h1>
-  <p>PHP Laravel Developer</p>
-  <p>
-    <a href="https://github.com/Shrikunj23" target="_blank">GitHub</a>
-  </p>
-</header>
+<div class="container">
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    I am a PHP Laravel developer with experience building real-world applications
-    like payroll systems, attendance management, and admin dashboards.
-  </p>
-</section>
+  <!-- LEFT SIDE -->
+  <div class="sidebar">
+    <h1>Shrikunj<br>Shiyani</h1>
+    <h2>PHP Laravel Developer</h2>
 
-<section>
-  <h2>Projects</h2>
+    <p>
+      Ahmedabad, India<br>
+      📧 shiyani1432@gmail.com<br>
+      📞 +91 7600785756
+    </p>
 
-  <div class="project">
-    <h3>Payroll Management System</h3>
-    <p>Laravel-based payroll system with salary calculation, Excel import/export, and reports.</p>
+    <div class="section-title">Profile</div>
+    <p>
+      Dynamic PHP Laravel Developer with proven expertise at Oceanmtech
+      Private Limited, specializing in scalable web applications and APIs.
+      Skilled in database design, third-party integrations, and performance
+      optimization.
+    </p>
+
+    <div class="section-title">Skills</div>
+
+    <p><strong>Languages</strong></p>
+    <ul>
+      <li>PHP, JavaScript, SQL</li>
+      <li>HTML5, CSS3</li>
+    </ul>
+
+    <p><strong>Frameworks</strong></p>
+    <ul>
+      <li>Laravel, jQuery, Bootstrap</li>
+    </ul>
+
+    <p><strong>Databases</strong></p>
+    <ul>
+      <li>MySQL, MongoDB</li>
+    </ul>
+
+    <p><strong>Tools & Tech</strong></p>
+    <ul>
+      <li>REST APIs, AJAX, JSON</li>
+      <li>Git, GitHub, GitLab</li>
+      <li>Postman</li>
+    </ul>
+
+    <p><strong>Other</strong></p>
+    <ul>
+      <li>Payment Gateway Integration</li>
+      <li>JWT, Passport, Sanctum</li>
+      <li>AWS, DigitalOcean, cPanel</li>
+    </ul>
+
+    <div class="section-title">Languages</div>
+    <ul>
+      <li>English</li>
+      <li>Hindi</li>
+      <li>Gujarati</li>
+    </ul>
   </div>
 
-  <div class="project">
-    <h3>Attendance Management System</h3>
-    <p>Location-based attendance tracking system built using Laravel and AJAX.</p>
-  </div>
-</section>
+  <!-- RIGHT SIDE -->
+  <div class="content">
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-</section>
+    <h2>Work Experience</h2>
+
+    <div class="job-title">PHP Laravel Developer</div>
+    <div class="company">
+      Oceanmtech Private Limited, Ahmedabad | July 2022 – Present
+    </div>
+
+    <ul>
+      <li>Developed and maintained Laravel-based web applications.</li>
+      <li>Built and optimized RESTful APIs for web and mobile platforms.</li>
+      <li>Implemented authentication, authorization, and middleware.</li>
+      <li>Designed and managed relational databases (MySQL).</li>
+      <li>Integrated payment gateways, SMS, and social login services.</li>
+      <li>Improved performance through optimized queries and caching.</li>
+      <li>Used Git for version control and team collaboration.</li>
+    </ul>
+
+    <h2>Projects</h2>
+
+    <div class="project">
+      <strong>HRMS (Employee CRM)</strong><br>
+      <a href="https://hrms.ambtechonline.in" target="_blank">hrms.ambtechonline.in</a>
+      <ul>
+        <li>Employee CRM with attendance, leave, and performance tracking.</li>
+        <li>Role-based authentication and data security.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <strong>Bakery Billing System (Multi-Domain)</strong><br>
+      <a href="https://bakery.oceanapplications.com" target="_blank">bakery.oceanapplications.com</a>
+      <ul>
+        <li>Multi-branch billing and product management system.</li>
+        <li>Invoice generation, stock tracking, and reporting.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <strong>HRMS with Payroll Calculation</strong><br>
+      <a href="https://ambtechonline.in" target="_blank">ambtechonline.in</a>
+      <ul>
+        <li>Automated salary calculation and payroll processing.</li>
+        <li>Overtime, deductions, and salary slip generation.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <strong>AI Logo Maker (API + Web)</strong><br>
+      <a href="https://logo-maker.oceanapplications.com" target="_blank">logo-maker.oceanapplications.com</a>
+      <ul>
+        <li>AI-based logo generation using API & web platform.</li>
+        <li>Integrated AI/ML APIs for dynamic logo creation.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <strong>ZebMoney</strong><br>
+      <a href="https://zebmoney.in" target="_blank">zebmoney.in</a>
+      <ul>
+        <li>Fund management and earning platform.</li>
+        <li>Wallet transactions and payment gateway integration.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <strong>AquaSafe Pool Management System</strong><br>
+      <a href="https://base.aquasafe.com" target="_blank">base.aquasafe.com</a>
+      <ul>
+        <li>Pool inspection and safety compliance tracking.</li>
+        <li>Role-based dashboards and real-time data collection.</li>
+      </ul>
+    </div>
+
+    <h2>Education</h2>
+    <p>
+      <strong>Bachelor of Technology (B.Tech) – Information Technology</strong><br>
+      Ganpat University, Mehsana<br>
+      July 2021
+    </p>
+
+  </div>
+</div>
+
+<div class="footer">
+  © 2026 Shrikunj Shiyani · PHP Laravel Developer
+</div>
 
 </body>
 </html>
