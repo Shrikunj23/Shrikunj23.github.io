@@ -6,116 +6,158 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6f8;
-  color: #1f2937;
+:root{
+  --primary:#2563eb;
+  --dark:#0f172a;
+  --light:#f8fafc;
+  --muted:#64748b;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  background: #ffffff;
-  display: grid;
-  grid-template-columns: 320px 1fr;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:var(--light);
+  color:#1f2937;
+  line-height:1.7;
 }
 
-/* LEFT PANEL */
-.sidebar {
-  background: #0f172a;
-  color: #e5e7eb;
-  padding: 30px;
+/* GLOBAL */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
 }
 
-.sidebar h1 {
-  font-size: 32px;
-  margin-bottom: 5px;
-  color: #38bdf8;
+h1,h2,h3{
+  color:var(--dark);
+  margin-bottom:10px;
 }
 
-.sidebar h2 {
-  font-size: 16px;
-  font-weight: normal;
-  margin-bottom: 20px;
+h2{
+  font-size:28px;
+  margin-top:60px;
 }
 
-.sidebar p {
-  font-size: 14px;
-  line-height: 1.6;
+p{color:#334155}
+
+a{
+  color:var(--primary);
+  text-decoration:none;
 }
 
-.section-title {
-  margin-top: 30px;
-  font-size: 18px;
-  color: #38bdf8;
-  border-bottom: 1px solid #334155;
-  padding-bottom: 5px;
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0f172a,#020617);
+  color:#e5e7eb;
+  padding:80px 20px;
 }
 
-.sidebar ul {
-  padding-left: 18px;
+.hero-content{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
 }
 
-.sidebar li {
-  font-size: 14px;
-  margin-bottom: 6px;
+.hero h1{
+  font-size:44px;
+  color:#38bdf8;
 }
 
-/* MAIN CONTENT */
-.content {
-  padding: 40px;
+.hero h3{
+  font-weight:400;
+  color:#cbd5f5;
 }
 
-.content h2 {
-  font-size: 22px;
-  color: #0f172a;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+.hero p{
+  color:#cbd5f5;
+  max-width:500px;
 }
 
-.job-title {
-  font-weight: bold;
-  font-size: 16px;
+.hero .contact{
+  margin-top:20px;
+  font-size:14px;
 }
 
-.company {
-  font-size: 14px;
-  color: #475569;
-  margin-bottom: 10px;
+/* SECTIONS */
+.section{
+  margin-top:80px;
 }
 
-.content ul {
-  padding-left: 18px;
+/* SKILLS */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
 }
 
-.content li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+.skill{
+  background:#e0e7ff;
+  color:#1e3a8a;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:14px;
 }
 
-.project {
-  margin-bottom: 15px;
+/* EXPERIENCE */
+.timeline{
+  border-left:3px solid var(--primary);
+  padding-left:30px;
 }
 
-.project a {
-  color: #2563eb;
-  text-decoration: none;
-  font-size: 14px;
+.timeline-item{
+  margin-bottom:40px;
 }
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 13px;
-  color: #64748b;
+.timeline-item h3{
+  margin-bottom:5px;
+}
+
+.timeline-item span{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.project{
+  background:#ffffff;
+  border-radius:14px;
+  padding:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:.3s;
+}
+
+.project:hover{
+  transform:translateY(-6px);
+}
+
+.project h3{
+  margin-top:0;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:40px 20px;
+  color:var(--muted);
+  font-size:14px;
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .container {
-    grid-template-columns: 1fr;
+@media(max-width:900px){
+  .hero-content{
+    grid-template-columns:1fr;
+    text-align:center;
   }
 }
 </style>
@@ -123,151 +165,134 @@ body {
 
 <body>
 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div>
+      <h1>Shrikunj Shiyani</h1>
+      <h3>PHP Laravel Developer</h3>
+      <p>
+        Experienced Laravel developer specializing in scalable web applications,
+        RESTful APIs, dashboards, and performance-driven backend systems.
+      </p>
+      <div class="contact">
+        📍 Ahmedabad, India<br>
+        📧 shiyani1432@gmail.com<br>
+        📞 +91 7600785756<br>
+        🌐 <a href="https://github.com/Shrikunj23" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="container">
 
-  <!-- LEFT SIDE -->
-  <div class="sidebar">
-    <h1>Shrikunj<br>Shiyani</h1>
-    <h2>PHP Laravel Developer</h2>
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Me</h2>
+  <p>
+    Dynamic PHP Laravel Developer with professional experience at Oceanmtech
+    Private Limited. I focus on building secure, scalable, and maintainable
+    backend systems with strong database architecture and seamless third-party
+    integrations.
+  </p>
+</section>
 
-    <p>
-      Ahmedabad, India<br>
-      📧 shiyani1432@gmail.com<br>
-      📞 +91 7600785756
-    </p>
-
-    <div class="section-title">Profile</div>
-    <p>
-      Dynamic PHP Laravel Developer with proven expertise at Oceanmtech
-      Private Limited, specializing in scalable web applications and APIs.
-      Skilled in database design, third-party integrations, and performance
-      optimization.
-    </p>
-
-    <div class="section-title">Skills</div>
-
-    <p><strong>Languages</strong></p>
-    <ul>
-      <li>PHP, JavaScript, SQL</li>
-      <li>HTML5, CSS3</li>
-    </ul>
-
-    <p><strong>Frameworks</strong></p>
-    <ul>
-      <li>Laravel, jQuery, Bootstrap</li>
-    </ul>
-
-    <p><strong>Databases</strong></p>
-    <ul>
-      <li>MySQL, MongoDB</li>
-    </ul>
-
-    <p><strong>Tools & Tech</strong></p>
-    <ul>
-      <li>REST APIs, AJAX, JSON</li>
-      <li>Git, GitHub, GitLab</li>
-      <li>Postman</li>
-    </ul>
-
-    <p><strong>Other</strong></p>
-    <ul>
-      <li>Payment Gateway Integration</li>
-      <li>JWT, Passport, Sanctum</li>
-      <li>AWS, DigitalOcean, cPanel</li>
-    </ul>
-
-    <div class="section-title">Languages</div>
-    <ul>
-      <li>English</li>
-      <li>Hindi</li>
-      <li>Gujarati</li>
-    </ul>
+<!-- SKILLS -->
+<section class="section">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">PHP</div>
+    <div class="skill">Laravel</div>
+    <div class="skill">MySQL</div>
+    <div class="skill">MongoDB</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">jQuery</div>
+    <div class="skill">Bootstrap</div>
+    <div class="skill">REST APIs</div>
+    <div class="skill">AJAX</div>
+    <div class="skill">JWT</div>
+    <div class="skill">Sanctum</div>
+    <div class="skill">Git</div>
+    <div class="skill">Postman</div>
+    <div class="skill">AWS</div>
+    <div class="skill">DigitalOcean</div>
   </div>
+</section>
 
-  <!-- RIGHT SIDE -->
-  <div class="content">
+<!-- EXPERIENCE -->
+<section class="section">
+  <h2>Work Experience</h2>
 
-    <h2>Work Experience</h2>
-
-    <div class="job-title">PHP Laravel Developer</div>
-    <div class="company">
-      Oceanmtech Private Limited, Ahmedabad | July 2022 – Present
-    </div>
-
-    <ul>
-      <li>Developed and maintained Laravel-based web applications.</li>
-      <li>Built and optimized RESTful APIs for web and mobile platforms.</li>
-      <li>Implemented authentication, authorization, and middleware.</li>
-      <li>Designed and managed relational databases (MySQL).</li>
-      <li>Integrated payment gateways, SMS, and social login services.</li>
-      <li>Improved performance through optimized queries and caching.</li>
-      <li>Used Git for version control and team collaboration.</li>
-    </ul>
-
-    <h2>Projects</h2>
-
-    <div class="project">
-      <strong>HRMS (Employee CRM)</strong><br>
-      <a href="https://hrms.ambtechonline.in" target="_blank">hrms.ambtechonline.in</a>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>PHP Laravel Developer</h3>
+      <span>Oceanmtech Private Limited · Ahmedabad · Jul 2022 – Present</span>
       <ul>
-        <li>Employee CRM with attendance, leave, and performance tracking.</li>
-        <li>Role-based authentication and data security.</li>
+        <li>Developed and maintained enterprise-level Laravel applications.</li>
+        <li>Built RESTful APIs for web & mobile platforms.</li>
+        <li>Implemented authentication, authorization & middleware.</li>
+        <li>Integrated payment gateways, SMS, and third-party services.</li>
+        <li>Optimized database queries and improved application performance.</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section">
+  <h2>Projects</h2>
+
+  <div class="projects">
 
     <div class="project">
-      <strong>Bakery Billing System (Multi-Domain)</strong><br>
-      <a href="https://bakery.oceanapplications.com" target="_blank">bakery.oceanapplications.com</a>
-      <ul>
-        <li>Multi-branch billing and product management system.</li>
-        <li>Invoice generation, stock tracking, and reporting.</li>
-      </ul>
+      <h3>HRMS (Employee CRM)</h3>
+      <p>Employee management system with attendance, leave, and performance tracking.</p>
+      <a href="https://hrms.ambtechonline.in" target="_blank">View Project →</a>
     </div>
 
     <div class="project">
-      <strong>HRMS with Payroll Calculation</strong><br>
-      <a href="https://ambtechonline.in" target="_blank">ambtechonline.in</a>
-      <ul>
-        <li>Automated salary calculation and payroll processing.</li>
-        <li>Overtime, deductions, and salary slip generation.</li>
-      </ul>
+      <h3>Bakery Billing System</h3>
+      <p>Multi-branch billing, stock management, and invoice generation platform.</p>
+      <a href="https://bakery.oceanapplications.com" target="_blank">View Project →</a>
     </div>
 
     <div class="project">
-      <strong>AI Logo Maker (API + Web)</strong><br>
-      <a href="https://logo-maker.oceanapplications.com" target="_blank">logo-maker.oceanapplications.com</a>
-      <ul>
-        <li>AI-based logo generation using API & web platform.</li>
-        <li>Integrated AI/ML APIs for dynamic logo creation.</li>
-      </ul>
+      <h3>HRMS with Payroll</h3>
+      <p>Payroll automation with salary calculation, deductions, and slips.</p>
+      <a href="https://ambtechonline.in" target="_blank">View Project →</a>
     </div>
 
     <div class="project">
-      <strong>ZebMoney</strong><br>
-      <a href="https://zebmoney.in" target="_blank">zebmoney.in</a>
-      <ul>
-        <li>Fund management and earning platform.</li>
-        <li>Wallet transactions and payment gateway integration.</li>
-      </ul>
+      <h3>AI Logo Maker</h3>
+      <p>AI-powered logo generation platform (API + Web).</p>
+      <a href="https://logo-maker.oceanapplications.com" target="_blank">View Project →</a>
     </div>
 
     <div class="project">
-      <strong>AquaSafe Pool Management System</strong><br>
-      <a href="https://base.aquasafe.com" target="_blank">base.aquasafe.com</a>
-      <ul>
-        <li>Pool inspection and safety compliance tracking.</li>
-        <li>Role-based dashboards and real-time data collection.</li>
-      </ul>
+      <h3>ZebMoney</h3>
+      <p>Fund management and earning platform with secure wallet system.</p>
+      <a href="https://zebmoney.in" target="_blank">View Project →</a>
     </div>
 
-    <h2>Education</h2>
-    <p>
-      <strong>Bachelor of Technology (B.Tech) – Information Technology</strong><br>
-      Ganpat University, Mehsana<br>
-      July 2021
-    </p>
+    <div class="project">
+      <h3>AquaSafe Pool Management</h3>
+      <p>Inspection, compliance tracking, and real-time reporting system.</p>
+      <a href="https://base.aquasafe.com" target="_blank">View Project →</a>
+    </div>
 
   </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section">
+  <h2>Education</h2>
+  <p>
+    <strong>B.Tech in Information Technology</strong><br>
+    Ganpat University, Mehsana · 2021
+  </p>
+</section>
+
 </div>
 
 <div class="footer">
